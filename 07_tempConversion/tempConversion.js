@@ -2,29 +2,14 @@
 /* (100 °F - 32) × 5/9 = 37,778 °C */
 
 const convertToCelsius = function(far) {
-let cel;
-
-  if (far < 0) {
-    cel = far - 32 * (5/9);
-  } else {
-    cel = far - 32 * (5/9);
-  }
-  
-  return cel;
+  return Math.round((far - 32) * (5/9) * 10) / 10;
 };
 
 
 /* (100 °C × 9/5) + 32 = 212 °F */
 
 const convertToFahrenheit = function(cel) {
-let far;
-
-  if (cel < 0) {
-    far = (cel * 5/9) + 32;
-  } else {
-    far = (cel * 5/9) + 32;
-  }
-  return far;
+  return Math.round(((cel * 9) / 5 + 32) * 10) / 10 ;
 };
 
 // Do not edit below this line
